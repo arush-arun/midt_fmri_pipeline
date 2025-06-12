@@ -1,0 +1,2 @@
+max_motion_mm,mean_motion_mm,std_motion_mm,max_abs_displacement,mean_abs_displacement,max_rotation_deg,mean_rotation_deg,n_volumes,available_params,subject_id,session
+1.1988,0.4966,0.3912,1.1939,0.1975,0.4932,0.0861,367,"['trans_x', 'trans_y', 'trans_z', 'rot_x', 'rot_y', 'rot_z']",sub-017,1

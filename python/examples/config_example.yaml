@@ -1,0 +1,50 @@
+# MIDT Pipeline Configuration File (YAML format)
+# Copy this file and customize for your dataset
+
+# Required paths - UPDATE THESE FOR YOUR SYSTEM
+base_dir: "/path/to/your/analysis/directory"
+behavioral_dir: "/path/to/behavioral/timing/files"
+fmriprep_dir: "/path/to/fmriprep/derivatives"
+
+# Subject information - UPDATE WITH YOUR SUBJECTS
+subject_ids:
+  - "sub-001"
+  - "sub-002"
+  - "sub-003"
+  # Add your complete subject list here
+
+# Session configuration
+sessions_to_process:
+  - "1"
+  # Options: ["1"], ["2"], ["1", "2"], etc.
+
+# Subject exclusions (optional)
+excluded_subjects:
+  # Format: [subject_id, reason, affected_sessions]
+  # Examples:
+  # - ["sub-021", "Motion artifacts", "all"]
+  # - ["sub-032", "Timing file issues", "ses-1"]
+
+# Acquisition parameters - UPDATE BASED ON YOUR PROTOCOL
+tr: 1.6                    # Repetition time (seconds)
+n_volumes: 367             # Number of volumes per run (after dummy removal)
+dummy_scans: 5             # Number of dummy scans to remove
+smooth_fwhm: 6             # Smoothing kernel FWHM (mm)
+hpf: 128.0                 # High-pass filter cutoff (seconds)
+
+# Processing options
+run_timing_extraction: true
+run_motion_extraction: true
+run_first_level: true
+
+# Motion parameters to extract
+motion_params:
+  - "trans_x"
+  - "trans_y" 
+  - "trans_z"
+  - "rot_x"
+  - "rot_y"
+  - "rot_z"
+
+# Task parameters
+task: "MIDT"

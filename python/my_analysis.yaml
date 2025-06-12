@@ -1,0 +1,46 @@
+# MIDT Pipeline Configuration
+# Copy this file and update paths for your data
+
+# Required paths - UPDATE THESE
+base_dir: "/path/to/your/analysis/output"
+behavioral_dir: "/path/to/behavioral/timing/files" 
+fmriprep_dir: "/path/to/fmriprep/derivatives"
+
+# Subject list - UPDATE WITH YOUR SUBJECTS
+subject_ids:
+  - "sub-001"
+  - "sub-002"
+  - "sub-017"
+  # Add your subjects here...
+
+# Session configuration
+sessions_to_process: ["1"]
+
+# Acquisition parameters (update if needed)
+tr: 1.6
+n_volumes: 367
+dummy_scans: 5
+smooth_fwhm: 6
+hpf: 128.0
+
+# Processing options
+run_timing_extraction: true
+run_motion_extraction: true
+run_first_level: true
+
+# Motion parameters to extract
+motion_params:
+  - "trans_x"
+  - "trans_y" 
+  - "trans_z"
+  - "rot_x"
+  - "rot_y"
+  - "rot_z"
+
+# Task name
+task: "MIDT"
+
+# Optional: Subject exclusions
+excluded_subjects: []
+  # Format: [subject_id, reason, affected_sessions]
+  # Example: ["sub-021", "Motion artifacts", "all"]
