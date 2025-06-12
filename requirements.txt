@@ -1,0 +1,34 @@
+# Core neuroimaging packages
+nilearn>=0.10.0
+nibabel>=4.0.0
+bids>=0.15.0
+pybids>=0.15.0
+
+# Data processing
+pandas>=1.5.0
+numpy>=1.21.0
+scipy>=1.9.0
+
+# Machine learning
+scikit-learn>=1.1.0
+
+# Plotting and visualization
+matplotlib>=3.5.0
+seaborn>=0.11.0
+
+# Parallel processing
+joblib>=1.2.0
+
+# CLI and configuration
+click>=8.0.0
+pyyaml>=6.0
+
+# Development and testing (optional)
+pytest>=7.0.0
+pytest-cov>=4.0.0
+black>=22.0.0
+flake8>=5.0.0
+
+# Documentation (optional)
+sphinx>=5.0.0
+sphinx-rtd-theme>=1.0.0
